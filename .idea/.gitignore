@@ -1,0 +1,12 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+
+
+# Editor
+/.idea
+/booki-mockup-integration.iml
+/modules.xml
+/vcs.xml
