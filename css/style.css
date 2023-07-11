@@ -28,6 +28,8 @@ body {
 .section-title {
     margin: 0;
     font-size: 22px;
+    /* précise l'épaisseur de la police */
+    font-weight: 700;
 }
 
 .card {
@@ -46,11 +48,12 @@ body {
 }
 
 .euro {
-    font-weight: 700;
+    /* épaisseur de la police modifiée de 700 à 600 */
+    font-weight: 600;
 }
 
-.neutralStar {
-    color: var(--main-bg-color)
+.neutral-star {
+    color: var(--main-bg-color);
 }
 
 /****** Hebergements And Populaires ***********/
@@ -119,8 +122,6 @@ body {
 
 
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
@@ -158,5 +159,19 @@ body {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    /* disposition des cartes en colonne sur mobile */
+    .populaires-cards {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* section "les plus populaires" au dessus de la section "hébergements à marseille" sur mobile */
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    /* disposition des cartes sur toute la largeur disponible sur mobile */
+    .populaires-cards .card {
+        width: 100%;
+    }
 }
