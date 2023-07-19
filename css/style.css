@@ -1,36 +1,52 @@
-/* ===============
-   Global Settings
-   =============== */
+/* =====================
+   Typography and Colors
+   ===================== */
 
+/*!* ============ Fonts ===============*/
+
+/* Global Settings */
 * {
     font-family: 'Raleway', sans-serif;
 }
+
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.large-bold {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.medium-regular {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Accommodations and Trending */
+
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.euro {
+    font-weight: 600;
+}
+
+/*!* ============ Colors ==============*/
 
 :root {
     --blue: #0065FC;
     --lightgrey: #F2F2F2;
     --paleblue: #DEEBFF;
     --grey: #D9D9D9;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-}
-
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px; /* padding of 50px on the left and right */
-    box-sizing: border-box;
-
-    border: 5px solid black;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 35px;
-    align-self: stretch;
 }
 
 .fa-solid {
@@ -41,75 +57,53 @@ body {
     color: var(--lightgrey);
 }
 
-.section-title {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 700;
-    border: 5px solid yellow;
-}
-
 .card {
     background-color: white;
-    border-radius: 20px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    box-sizing: border-box;
-}
-
-.card img {
-    object-fit: cover;
-}
-
-.card-title {
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.euro {
-    /* Modify font weight from 700 to 600 */
-    font-weight: 600;
-}
-
-
-/*!* ========================*/
-/*   Accommodation & Trending*/
-/*   ======================== *!*/
-
-.accommodation-and-trending {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;/*ok*/
 }
 
 .accommodation-and-trending section {
     background-color: var(--lightgrey);
-    border-radius: 15px;
-    padding: 30px;
-    gap: 30px;
-    box-sizing: border-box;
-
-    /*border: 5px solid red;*/
 }
 
-.accommodation-title, .trending-title {
-    margin-bottom: 20px;
-    border: 5px solid orange;
+
+
+
+/* =====================
+           Layout
+   ===================== */
+
+/* Global Settings */
+body {
+    display: flex;
+    justify-content: center;
 }
 
-/*!* ------------- Accommodation ------------- *!*/
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+/* Accommodations and Trending */
+.accommodation-and-trending {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+
+/* Accommodations */
 .accommodation {
-    width: 65%;
-    border: 5px solid purple;
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
 }
 
 .accommodation-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
     align-self: stretch;
-
-    border: 5px solid green;
 }
 
 .accommodation .card {
@@ -117,23 +111,6 @@ body {
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-
-    border-radius: 20px;
-    background: #FFFFFF;
-    gap: 4px;
-
-    /* Shadow-card */
-    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.10);
-}
-
-.accommodation .card img {
-    width: 100%;
-    height: 124px;
-    align-self: stretch;
-
-    border-radius: 20px 20px 0 0;
-    border: 5px solid white;
-    box-sizing: border-box;
 }
 
 .accommodation .card-content {
@@ -141,37 +118,19 @@ body {
     flex-direction: column;
     align-items: flex-start;
     align-self: stretch;
-    padding: 0 15px;
-    gap: 8px;
+}
+
+.accommodation .card img {
+    align-self: stretch;
 }
 
 .accommodation .card-txt .card-rating {
     display: flex;
     flex-direction: column;
-    gap: 4px; /*ou 8px */
-    align-self: stretch;
-    padding: 0 10px;
-}
-
-.accommodation .card-title {
-    display: flex;
-    flex-direction: column;
     align-self: stretch;
 }
 
-.accommodation .card-subtitle {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 400;
-    align-self: stretch;
-}
-
-/*!* ------------- Trending ------------- *!*/
-.trending {
-    width: 32%;
-    border: 5px solid rebeccapurple;
-}
-
+/* Trending */
 .trending-title {
     display: flex;
     justify-content: space-between;
@@ -179,29 +138,133 @@ body {
 }
 
 .trending-cards {
-    border: 5px solid blue;
+    display: flex;
+    flex-direction: column;
 }
 
 .trending-cards .card {
     display: flex;
-    /*margin-top: 33px;*/
+    align-items: stretch;
+}
+
+.trending .card img {
+    align-self: stretch;
+}
+
+.trending-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ======================
+   Dimensions and Spacing
+   ====================== */
+
+/* Global Settings */
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 320px;
+    box-sizing: border-box;
+
+    padding: 0 50px;
+    gap: 35px;
+}
+
+.section-title {
+    margin: 0;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Accommodations and Trending */
+.accommodation-and-trending {
+    gap: 40px;
+}
+.accommodation-and-trending section {
+    border-radius: 15px;
+    padding: 30px;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+/* Accommodations */
+.accommodation {
+    width: 65%;
+
+    padding: 30px;
+    gap: 30px;
+}
+
+.accommodation-grid {
+    grid-gap: 30px;
+}
+
+.accommodation .card {
+    border-radius: 20px;
+    gap: 4px;
+}
+
+.accommodation-title, .trending-title {
+    margin-bottom: 20px;
+}
+
+
+.accommodation .card img {
+    width: 100%;
+    height: 124px;
+    border-radius: 20px 20px 0 0;
+    border: 5px solid white;
+    box-sizing: border-box;
+}
+
+.accommodation .card-content {
+    padding: 0 15px;
+    gap: 8px;
+}
+
+.accommodation .card-txt .card-rating {
+    padding: 0 10px;
+    gap: 4px;
+}
+
+/* Trending */
+
+.trending {
+    width: 32%;
+
+    padding: 30px;
+    gap: 30px;
+}
+
+
+.trending-cards {
+    gap: 30px;
+}
+
+
+.trending-cards .card {
     padding: 5px;
 }
 
-.trending-cards img {
-    width: 33%;
+.trending .card img {
     height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+}
+
+.trending .card-content {
+    height: 136px;
 }
 
 .trending-cards .card-content {
     width: 67%;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     box-sizing: border-box;
+
+    padding: 10px 5px 5px 15px;
 }
 
 .trending-cards .card-title {
@@ -215,15 +278,107 @@ body {
 
 .trending-cards .card-rating {
     margin-bottom: 5px;
+
 }
 
 
-/*!* =============*/
-/*   Media Queries*/
-/*   ============= *!*/
+
+.trending-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* ======================
+   Images and Media
+   ====================== */
+
+.card img {
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!* ======================================================================================= DEVELOPMENT MODE START === *!*/
+
+
+/*.accommodation-and-trending {*/
+/*    border: 5px solid red;*/
+/*}*/
+
+/*.accommodation {*/
+/*    border: 5px solid blue;*/
+/*}*/
+
+/*.trending {*/
+/*    border: 5px solid green;*/
+/*}*/
+
+/*.accommodation-title, .trending-title {*/
+/*    border: 5px solid purple;*/
+/*}*/
+
+/*.accommodation-grid {*/
+/*    border: 5px solid yellow;*/
+/*}*/
+
+/*.trending-cards {*/
+/*    border: 5px solid orange;*/
+/*}*/
+
+/*.card {*/
+/*    border: 5px solid black;*/
+/*}*/
+
+/*.card-txt{*/
+/*    border: 5px solid purple;*/
+/*}*/
+
+/*.card-content {*/
+/*    border: 5px solid hotpink;*/
+/*}*/
+
+/*.card-title, .card-subtitle {*/
+/*    border: 2px solid pink;*/
+/*}*/
+
+/*.card-rating {*/
+/*    border: 5px solid turquoise;*/
+/*}*/
+
+/*#more-results {*/
+/*    border: 5px solid brown;*/
+/*}*/
+
+/*!* ========================================================================================= DEVELOPMENT MODE END === *!*/
+
+
+
+
+
+
+
+
+/* =============
+   Media Queries
+   ============= */
 
 /*!* ---- Medium Devices (less/equal than 1024px) ---- *!*/
 @media (max-width: 1024px) {
+
+    /* Accommodation and Trending on Medium Devices */
     .accommodation-and-trending {
         flex-direction: column;
         gap: 50px; /*ok*/
@@ -243,6 +398,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-self: stretch;
     }
 
     .trending-cards .card {
@@ -258,19 +414,28 @@ body {
     }
 }
 
+
 /*!* ---- Small Devices (less/equal than 768px) ---- *!*/
 @media (max-width: 768px) {
+    /*!* Global Settings on small devices *!*/
+    /*main-container {*/
+    /*    align-items: center;*/
+    /*}*/
 
-    /*  "Most Popular" section above the "Accommodations in Marseille" section on mobile  */
+    /* Accommodation and Trending on Small Devices */
+
+    /* Trending section above Accommodation section on mobile  */
     .accommodation-and-trending {
         flex-direction: column-reverse;
         gap: 15px; /*ok*/
     }
 
-    /* sections without border-radius on mobile */
+    /* Remove sections border-radius on mobile */
     .accommodation-and-trending section {
+        display: flex;
+
         border-radius: 0;
-        gap: 15px; /*ok*/
+        gap: 15px;
     }
 
     /* White background on mobile*/
@@ -278,17 +443,27 @@ body {
         background-color: #FFFFFF;
     }
 
-    /* Card layout in column on mobile */
-    .accommodation-grid {
-        display: block;
+    /* Reduce padding and gap on mobile */
+    .accommodation {
+        padding: 20px;
+        gap: 15px;
     }
 
-    /* section layout in column on mobile  */
+    /* Reduce gap and columns to 1 on mobile */
+    .accommodation-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+
+
+    /* Modify section layout in column on mobile */
     .trending {
         display: flex;
-        padding: 30px 20px;
         flex-direction: column;
         align-self: stretch;
+
+        padding: 30px 20px;
+        gap: 15px;
     }
 
     /* Card layout in column on mobile  */
@@ -296,6 +471,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         gap: 15px;
     }
 
@@ -304,3 +480,5 @@ body {
         width: 100%;
     }
 }
+
+
