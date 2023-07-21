@@ -29,6 +29,14 @@ a {
     color: black;
 }
 
+ul {
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+
 /* Accommodations and Trending */
 
 .card-title {
@@ -70,8 +78,10 @@ a {
     background-color: var(--lightgrey);
 }
 
-
-
+nav li a:hover {
+    color: var(--blue);
+    border-top: 2px solid var(--blue);
+}
 
 /* =====================
            Layout
@@ -86,9 +96,21 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
-    /*align-items: flex-start;*/
-    /*align-self: stretch;*/
     align-items: center;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items:start;
+    align-self: stretch;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* Accommodations and Trending */
@@ -179,17 +201,30 @@ body {
     align-self: stretch;
 }
 
+/* footer */
+
+/*footer {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(3, 1fr); !* 3 columns of equal width *!*/
+/*    align-self: stretch;*/
+/*}*/
 
 /* ======================
    Dimensions and Spacing
    ====================== */
 
 /* Global Settings */
+
+body {
+    margin-top: 2px;
+}
+
 .main-container {
     width: 100%;
     max-width: 1440px;
     min-width: 320px;
     box-sizing: border-box;
+    gap: 30px;
 }
 
 main {
@@ -205,6 +240,36 @@ main {
     border-radius: 20px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+}
+
+/* Header */
+header .logo {
+    padding: 30px 50px;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 61px;
+    height: 19px;
+}
+
+nav {
+    padding: 0 25px;
+}
+
+nav ul {
+    width: 329px;
+    margin: 0; /* remove default margin */
+    padding-left: 0; /* remove 40px default padding that comes with bullets on ul */
+}
+
+nav ul li {
+    padding-top: 20px;
+    margin: 0;
+}
+
+nav li a {
+    padding-top: 20px;
 }
 
 /* Accommodations and Trending */
@@ -303,20 +368,44 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*!* ======================================================================================= DEVELOPMENT MODE START === *!*/
 
+/*body{*/
+/*    border: 5px solid black;*/
+/*}*/
+
+/*.main-container {*/
+/*    border: 5px solid olivedrab;*/
+/*}*/
+
+/*header {*/
+/*    border: 5px solid pink;*/
+/*}*/
+
+/*main {*/
+/*    border: 5px solid blue;*/
+/*}*/
+
+
+/*.logo {*/
+/*    border: 2px solid green;*/
+/*}*/
+
+/*nav {*/
+/*    border: 2px solid purple;*/
+/*}*/
+
+/*nav ul {*/
+/*    border: 2px solid yellow;*/
+/*}*/
+
+/*nav li {*/
+/*    border: 2px solid red;*/
+/*}*/
+
+/*nav li a {*/
+/*    border: 2px solid turquoise;*/
+/*}*/
 
 /*.accommodation-and-trending {*/
 /*    border: 5px solid red;*/
@@ -362,25 +451,40 @@ main {
 /*    border: 5px solid turquoise;*/
 /*}*/
 
-/*#more-results {*/
+/*.accommodation a {*/
 /*    border: 5px solid brown;*/
 /*}*/
 
+
+
+
 /*!* ========================================================================================= DEVELOPMENT MODE END === *!*/
-
-
-
-
-
-
 
 
 /* =============
    Media Queries
    ============= */
 
+/*!* ---- Large Devices (more/equal than 1900px) ---- *!*/
+@media (min-width: 1900px) {
+
+    /* Header */
+    .main-container {
+        padding: 0 230px;
+    }
+
+    nav {
+        padding: 0 50px;
+    }
+}
 /*!* ---- Medium Devices (less/equal than 1024px) ---- *!*/
 @media (max-width: 1024px) {
+
+    /* Header */
+
+    nav {
+        padding: 0 50px;
+    }
 
     /* Accommodation and Trending on Medium Devices */
     .accommodation-and-trending {
@@ -424,6 +528,53 @@ main {
     main {
         padding: 0;
     }
+
+    /* Header */
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        padding: 0;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        margin: 0; /* remove default margin */
+        padding-left: 0; /* remove 40px default padding that comes with bullets on ul */
+    }
+
+    nav ul li {
+        flex-basis: 50%;
+        padding-top: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    nav li a {
+        display: block;
+        box-sizing: border-box;
+
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 15px;
+    }
+
+    nav li a:hover {
+        color: var(--blue);
+        border-bottom: 2px solid var(--blue);
+        border-top: none;
+    }
+
+
+
+
 
     /*!* Accommodation and Trending on Small Devices *!*/
 
