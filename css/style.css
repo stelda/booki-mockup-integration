@@ -66,6 +66,13 @@ ul {
     color: var(--blue);
 }
 
+/* header */
+nav li a:hover {
+    color: var(--blue);
+    border-top: 2px solid var(--blue);
+}
+
+/* accomodation and trending section */
 .neutral-star {
     color: var(--lightgrey);
 }
@@ -78,9 +85,9 @@ ul {
     background-color: var(--lightgrey);
 }
 
-nav li a:hover {
-    color: var(--blue);
-    border-top: 2px solid var(--blue);
+/* footer */
+footer {
+    background-color: var(--lightgrey);
 }
 
 /* =====================
@@ -203,11 +210,12 @@ nav ul {
 
 /* footer */
 
-/*footer {*/
-/*    display: grid;*/
-/*    grid-template-columns: repeat(3, 1fr); !* 3 columns of equal width *!*/
-/*    align-self: stretch;*/
-/*}*/
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    align-self: stretch;
+}
+
 
 /* ======================
    Dimensions and Spacing
@@ -242,6 +250,12 @@ main {
     box-sizing: border-box;
 }
 
+ul {
+    margin: 0; /* remove default margin */
+    padding-left: 0; /* remove 40px default padding that comes with bullets on ul */
+}
+
+
 /* Header */
 header .logo {
     padding: 30px 50px;
@@ -259,8 +273,7 @@ nav {
 
 nav ul {
     width: 329px;
-    margin: 0; /* remove default margin */
-    padding-left: 0; /* remove 40px default padding that comes with bullets on ul */
+
 }
 
 nav ul li {
@@ -357,7 +370,14 @@ nav li a {
     margin: 0;
 }
 
+/* footer */
+footer div {
+    padding: 20px;
+}
 
+footer ul li {
+    margin: 15px 0;
+}
 
 /* ======================
    Images and Media
@@ -455,7 +475,21 @@ nav li a {
 /*    border: 5px solid brown;*/
 /*}*/
 
+/*footer div {*/
+/*    border: 2px solid red;*/
+/*}*/
 
+/*!*footer h2 {*!*/
+/*!*    border: 5px solid pink;*!*/
+/*!*}*!*/
+
+/*footer ul {*/
+/*    border: 2px solid green;*/
+/*}*/
+
+/*footer ul li {*/
+/*    border: 5px solid blue;*/
+/*}*/
 
 
 /*!* ========================================================================================= DEVELOPMENT MODE END === *!*/
@@ -518,6 +552,14 @@ nav li a {
 
     .trending-cards .card-subtitle {
         font-size: 13px;
+    }
+
+    footer {
+        grid-gap: 30px;
+    }
+
+    footer div {
+        padding: 20px;
     }
 }
 
@@ -632,6 +674,19 @@ nav li a {
     .trending-cards .card {
         width: 100%;
     }
+
+    /*!* Footer *!*/
+    footer {
+        grid-template-columns: repeat(1, 1fr); /* 3 columns of equal width */
+        grid-gap: 50px;
+        padding: 30px;
+    }
+
+    footer div {
+        padding: 0;
+    }
+
+
 }
 
 
