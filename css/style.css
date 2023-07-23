@@ -211,9 +211,17 @@ nav ul {
 /* footer */
 
 footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-    align-self: stretch;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 
@@ -236,6 +244,8 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     padding: 0 50px;
     gap: 35px;
 }
@@ -371,12 +381,21 @@ nav li a {
 }
 
 /* footer */
-footer div {
-    padding: 20px;
+
+footer {
+    width: 100%;
 }
 
+footer div {
+    padding: 20px;
+
+}
+
+footer h2 {
+    margin: 0;
+}
 footer ul li {
-    margin: 15px 0;
+    margin-top: 15px;
 }
 
 /* ======================
@@ -389,6 +408,10 @@ footer ul li {
 
 
 /*!* ======================================================================================= DEVELOPMENT MODE START === *!*/
+
+/*.dev {*/
+/*    border: 5px solid purple;*/
+/*}*/
 
 /*body{*/
 /*    border: 5px solid black;*/
@@ -405,7 +428,6 @@ footer ul li {
 /*main {*/
 /*    border: 5px solid blue;*/
 /*}*/
-
 
 /*.logo {*/
 /*    border: 2px solid green;*/
@@ -475,6 +497,26 @@ footer ul li {
 /*    border: 5px solid brown;*/
 /*}*/
 
+/*.activities {*/
+/*    border: 5px solid red;*/
+/*}*/
+
+/*.activities-cards {*/
+/*    border: 2px solid hotpink;*/
+/*}*/
+
+/*!*.activities h2 {*!*/
+/*!*    border: 5px solid green;*!*/
+/*!*}*!*/
+
+/*figure {*/
+/*    border: 2px solid yellow;*/
+/*}*/
+
+/*footer {*/
+/*    border: 5px solid orangered;*/
+/*}
+*/
 /*footer div {*/
 /*    border: 2px solid red;*/
 /*}*/
@@ -500,11 +542,16 @@ footer ul li {
    ============= */
 
 /*!* ---- Large Devices (more/equal than 1900px) ---- *!*/
-@media (min-width: 1900px) {
+@media (min-width: 1899.98px) {
 
     /* Header */
     .main-container {
         padding: 0 230px;
+    }
+
+    main {
+        padding: 0 50px;
+        gap: 35px;
     }
 
     nav {
@@ -512,7 +559,7 @@ footer ul li {
     }
 }
 /*!* ---- Medium Devices (less/equal than 1024px) ---- *!*/
-@media (max-width: 1024px) {
+@media (max-width: 1023.98px) {
 
     /* Header */
 
@@ -555,7 +602,7 @@ footer ul li {
     }
 
     footer {
-        grid-gap: 30px;
+        gap: 30px;
     }
 
     footer div {
@@ -565,7 +612,7 @@ footer ul li {
 
 
 /*!* ---- Small Devices (less/equal than 768px) ---- *!*/
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     /*!* Global Settings on small devices *!*/
     main {
         padding: 0;
@@ -677,16 +724,14 @@ footer ul li {
 
     /*!* Footer *!*/
     footer {
-        grid-template-columns: repeat(1, 1fr); /* 3 columns of equal width */
-        grid-gap: 50px;
+        flex-direction: column;
         padding: 30px;
+        gap: 50px
     }
 
     footer div {
         padding: 0;
     }
-
-
 }
 
 
