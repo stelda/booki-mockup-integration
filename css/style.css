@@ -24,20 +24,18 @@
     font-weight: 400;
 }
 
+ul {
+    list-style-type: none;
+}
 a {
     text-decoration: none;
     color: black;
 }
 
-ul {
-    list-style-type: none;
-    font-size: 16px;
-    font-weight: 400;
+.filter p {
+    font-size: 17px;
+    font-weight: 700;
 }
-
-/* main section */
-
-/* Accommodations and Trending */
 
 .card-title {
     font-size: 16px;
@@ -72,7 +70,7 @@ nav li a:hover {
     border-top: 2px solid var(--blue);
 }
 
-/* accomodation and trending section */
+/* accommodation and trending section */
 .neutral-star {
     color: var(--lightgrey);
 }
@@ -119,6 +117,10 @@ nav ul {
     display: flex;
     justify-content: space-between;
 }
+
+/* Info-group */
+
+
 
 /* Accommodations and Trending */
 .accommodation-and-trending {
@@ -203,10 +205,40 @@ nav ul {
     align-self: stretch;
 }
 
+/* activities*/
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+
+}
+
+.activities-cards {
+    display: flex;
+    align-items: flex-start;
+}
+
+.activities .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.activities .card figcaption {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: center;
+    align-items: stretch;
+}
+
 /* footer */
 
 footer {
-
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -218,7 +250,6 @@ footer div {
     flex-direction: column;
     align-items: flex-start;
 }
-
 
 /* ======================
    Dimensions and Spacing
@@ -245,7 +276,7 @@ main {
     gap: 35px;
 }
 
-.section-title {
+.section-title, .card-title, figure, p {
     margin: 0;
 }
 
@@ -259,7 +290,6 @@ ul {
     margin: 0; /* remove default margin */
     padding-left: 0; /* remove 40px default padding that comes with bullets on ul */
 }
-
 
 /* Header */
 header .logo {
@@ -278,7 +308,6 @@ nav {
 
 nav ul {
     width: 329px;
-
 }
 
 nav ul li {
@@ -333,14 +362,9 @@ nav li a {
     gap: 8px;
 }
 
-.accommodation .card-content h3, .card-content p {
-    margin: 0;
-}
-
 /* Trending */
 .trending {
     width: 32%;
-
     padding: 30px;
     gap: 30px;
 }
@@ -367,7 +391,6 @@ nav li a {
 .trending-cards .card-content {
     width: 67%;
     box-sizing: border-box;
-
     padding: 10px 5px 5px 15px;
 }
 
@@ -379,6 +402,36 @@ nav li a {
     margin: 0;
 }
 
+/* activities */
+
+.activities {
+    padding: 30px;
+    gap: 30px;
+}
+
+.activities-cards {
+    gap: 30px;
+}
+
+.activities .card {
+
+    width: 25%;
+
+}
+
+.activities .card img {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px 20px 0 0;
+    box-sizing: border-box;
+}
+
+.activities .card figcaption {
+    display: flex;
+    padding: 20px 19px;;
+
+}
+
 /* footer */
 
 footer {
@@ -387,12 +440,12 @@ footer {
 
 footer div {
     padding: 20px;
-
 }
 
 footer h2 {
     margin: 0;
 }
+
 footer ul li {
     margin-top: 15px;
 }
@@ -405,12 +458,8 @@ footer ul li {
     object-fit: cover;
 }
 
-
 /*!* ======================================================================================= DEVELOPMENT MODE START === *!*/
 
-/*.dev {*/
-/*    border: 5px solid purple;*/
-/*}*/
 
 /*body{*/
 /*    border: 5px solid black;*/
@@ -532,17 +581,14 @@ footer ul li {
 /*    border: 5px solid blue;*/
 /*}*/
 
-
 /*!* ========================================================================================= DEVELOPMENT MODE END === *!*/
-
 
 /* =============
    Media Queries
    ============= */
 
-/*!* ---- Large Devices (more/equal than 1900px) ---- *!*/
-@media (min-width: 1899.98px) {
-
+/*!* ---- Large Devices (more than 1900px) ---- *!*/
+@media (min-width: 1900px) {
     /* Header */
     .main-container {
         padding: 0 230px;
@@ -558,15 +604,19 @@ footer ul li {
     }
 }
 /*!* ---- Medium Devices (less/equal than 1024px) ---- *!*/
-@media (max-width: 1023.98px) {
-
-    /* Header */
-
+@media (max-width: 1024px) {
+    /* header on medium devices */
     nav {
         padding: 0 50px;
     }
 
-    /* Accommodation and Trending on Medium Devices */
+    /* info-group on medium devices */
+    .filter p {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    /* accommodation and Trending on Medium Devices */
     .accommodation-and-trending {
         flex-direction: column;
         gap: 50px;
@@ -600,6 +650,20 @@ footer ul li {
         font-size: 13px;
     }
 
+    /* activities on medium devices */
+
+
+    .activities .card img{
+        height: 200px;
+    }
+
+    /* center align figcaption titles on medium devices */
+    .activities .card figcaption {
+        height: 50px;
+    }
+
+
+    /* footer on medium devices */
     footer {
         gap: 30px;
     }
@@ -609,16 +673,14 @@ footer ul li {
     }
 }
 
-
 /*!* ---- Small Devices (less/equal than 768px) ---- *!*/
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     /*!* Global Settings on small devices *!*/
     main {
         padding: 0;
     }
 
-    /* Header */
-
+    /* header on small devices */
     header {
         display: flex;
         flex-direction: column;
@@ -660,11 +722,13 @@ footer ul li {
         border-top: none;
     }
 
+    /* info-group on small devices */
+    .filter p {
+        font-size: 14px;
+        font-weight: 700;
+    }
 
-
-
-
-    /*!* Accommodation and Trending on Small Devices *!*/
+    /*!* accommodation and trending on small devices *!*/
 
     /* Trending section above Accommodation section on mobile  */
     .accommodation-and-trending {
@@ -675,7 +739,6 @@ footer ul li {
     /* Remove sections border-radius on mobile */
     .accommodation-and-trending section {
         display: flex;
-
         border-radius: 0;
         gap: 15px;
     }
@@ -695,7 +758,6 @@ footer ul li {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 15px;
     }
-
 
     /* Modify section layout in column on mobile */
     .trending {
@@ -721,7 +783,29 @@ footer ul li {
         width: 100%;
     }
 
-    /*!* Footer *!*/
+    /* activities */
+    .activities-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+
+        gap: 15px;
+    }
+
+    .activities .card {
+        width: 100%;
+    }
+
+    .activities .card img{
+        height: 141px;
+    }
+
+    .activities .card figcaption {
+        height: auto;
+    }
+
+    /*!* footer on small devices *!*/
     footer {
         flex-direction: column;
         padding: 30px;
@@ -732,5 +816,6 @@ footer ul li {
         padding: 0;
     }
 }
+
 
 
