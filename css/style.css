@@ -108,7 +108,7 @@ footer {
 }
 
 /* info-group */
-.filter p {
+.filter span {
     font-size: 17px;
     font-weight: 700;
 }
@@ -365,6 +365,7 @@ nav li a:hover {
     /* borders and background */
     border: 2px solid var(--grey);
     border-radius: 50px;
+    background-color: white;
 }
 
 .filter:hover {
