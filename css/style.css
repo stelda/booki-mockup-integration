@@ -67,6 +67,7 @@ TABLE OF CONTENTS
 
 .search-bar form input::placeholder {
     color: black;
+    opacity: 1; /* Firefox */
 }
 
 #search-text, #search-icon {
@@ -314,6 +315,10 @@ nav li a:hover {
     border-style: none;
 }
 
+.search-bar form input:focus {
+    outline: none;
+}
+
 .search-bar form button {
     /* layout */
     display: flex;
@@ -531,7 +536,6 @@ nav li a:hover {
     /* borders and background */
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-
 }
 
 .trending-cards .card-content {
@@ -544,7 +548,6 @@ nav li a:hover {
     height: 144px;
     padding: 10px 5px 5px 15px;
     box-sizing: border-box;
-
 }
 
 .trending-cards .card-txt {
@@ -680,7 +683,7 @@ footer ul li {
         flex-direction: row;
     }
 
-    .filter p {
+    .filter span {
         font-size: 16px;
         font-weight: 700;
     }
@@ -825,7 +828,7 @@ footer ul li {
         grid-row-gap: 20px;
     }
 
-    .filter p {
+    .filter span {
         /* fonts*/
         font-size: 14px;
         font-weight: 700;
