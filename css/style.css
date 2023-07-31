@@ -79,7 +79,6 @@ TABLE OF CONTENTS
     color: var(--lightgrey);
 }
 
-
 /* footer */
 footer {
     background-color: var(--lightgrey);
@@ -641,10 +640,11 @@ footer {
     /* layout */
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    align-self: stretch;
     box-sizing: border-box;
     /* dimensions and spacing */
     width: 100%;
+    gap: 30px;
 }
 
 footer div {
@@ -653,6 +653,7 @@ footer div {
     flex-direction: column;
     align-items: flex-start;
     /* dimensions and spacing */
+    width: 30%;
     padding: 20px;
 }
 
@@ -936,7 +937,7 @@ footer ul li {
         height: auto;
     }
 
-    /*!* footer on small devices *!*/
+    /*!* footer on mobile *!*/
     footer {
         /* layout */
         flex-direction: column;
@@ -946,6 +947,7 @@ footer ul li {
     }
 
     footer div {
+        width: 100%;
         padding: 0;
     }
 }
