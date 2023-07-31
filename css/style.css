@@ -596,7 +596,7 @@ nav li a:hover {
     gap: 30px;
 }
 
-.activities .card {
+.activities a  {
     /* layout */
     display: flex;
     flex-direction: column;
@@ -607,10 +607,10 @@ nav li a:hover {
     width: 25%;
 }
 
-.activities .card a {
+.activities a .card {
     /* dimensions and spacing */
     width: 100%;
-    box-sizing: border-box;
+    height: 100%;
 }
 
 .activities .card img {
