@@ -103,24 +103,24 @@ footer {
 }
 
 .medium-regular {
-    font-size: 1em; /* 16px = 1em */
+    font-size: 16px; /* 16px = 1em */
     font-weight: 400;
 }
 
 /* info-group */
 .filter span {
-    font-size: 17px; /* 1,06em */
+    font-size: 17px; /* 17px = 1,06em */
     font-weight: 700;
 }
 
 /* accommodation, trending & activities */
 .card-title {
-    font-size: 1em; /* 16px = 1em */
+    font-size: 16px; /* 16px = 1em */
     font-weight: 700;
 }
 
 .card-subtitle {
-    font-size: 14px; /* 14px = 0.875em */
+    font-size: 14px; /* 14px = 0.88em */
     font-weight: 400;
 }
 
@@ -699,7 +699,7 @@ footer ul li {
     }
 
     .filter span {
-        font-size: 1em; /* 16px = 1em */
+        font-size: 16px; /* 16px = 1em */
         font-weight: 700;
     }
 
@@ -730,11 +730,11 @@ footer ul li {
     }
 
     .trending-cards .card-title {
-        font-size: 1em; /* 16px = 1em */
+        font-size: 16px; /* 16px = 1em */
     }
 
     .trending-cards .card-subtitle {
-        font-size: 13px;
+        font-size: 13px; /* 13px = 0.81em */
     }
 
     /* activities on medium devices */
@@ -848,7 +848,7 @@ footer ul li {
 
     .filter span {
         /* fonts*/
-        font-size: 14px;
+        font-size: 14px; /* 14px = 0.88em */
         font-weight: 700;
     }
 
