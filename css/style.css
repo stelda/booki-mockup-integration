@@ -93,34 +93,34 @@ footer {
 }
 
 .section-title {
-    font-size: 22px;
+    font-size: 22px; /* 22px = 1.38em */
     font-weight: 700;
 }
 
 .large-bold {
-    font-size: 18px;
+    font-size: 18px; /* 18px = 1.13em */
     font-weight: 700;
 }
 
 .medium-regular {
-    font-size: 16px;
+    font-size: 1em; /* 16px = 1em */
     font-weight: 400;
 }
 
 /* info-group */
 .filter span {
-    font-size: 17px;
+    font-size: 17px; /* 1,06em */
     font-weight: 700;
 }
 
 /* accommodation, trending & activities */
 .card-title {
-    font-size: 16px;
+    font-size: 1em; /* 16px = 1em */
     font-weight: 700;
 }
 
 .card-subtitle {
-    font-size: 14px;
+    font-size: 14px; /* 14px = 0.875em */
     font-weight: 400;
 }
 
@@ -699,7 +699,7 @@ footer ul li {
     }
 
     .filter span {
-        font-size: 16px;
+        font-size: 1em; /* 16px = 1em */
         font-weight: 700;
     }
 
@@ -730,7 +730,7 @@ footer ul li {
     }
 
     .trending-cards .card-title {
-        font-size: 14px;
+        font-size: 1em; /* 16px = 1em */
     }
 
     .trending-cards .card-subtitle {
@@ -785,6 +785,7 @@ footer ul li {
         width: 100%;
         margin: 0; /* remove default margin */
         padding-left: 0; /* remove 40px default padding that comes with bullets on ul */
+        gap: 0;
     }
 
     nav ul li {
