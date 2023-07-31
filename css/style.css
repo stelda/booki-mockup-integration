@@ -237,7 +237,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     /* dimensions and spacing */
-    width: 329px;
+    gap: 68px;
 }
 
 nav ul li {
@@ -264,8 +264,6 @@ nav li a:hover {
     /* layout */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
     /* dimensions and spacing */
     gap: 35px;
 }
@@ -343,20 +341,20 @@ nav li a:hover {
  /*
     4.3 Filter-bar
  */
- .filter-bar {
+.filter-bar {
      /* layout */
      display: flex;
      align-items: center;
      /* dimensions and spacing */
      gap: 15px;
- }
+}
 
- .filters {
+.filters {
      /* layout */
      display: inline-flex;
      /* dimensions and spacing */
      gap: 15px;
- }
+}
 
 .filter {
     /* layout */
@@ -416,7 +414,6 @@ nav li a:hover {
 
 .accommodation-and-trending section {
     /* dimensions and spacing */
-    padding: 30px;
     gap: 30px;
     box-sizing: border-box;
     /* borders and background */
@@ -668,7 +665,7 @@ footer ul li {
 /*!* ---- Large Devices (more than 1900px) ---- *!*/
 @media (min-width: 1900px) {
     .main-container {
-        padding: 0 230px;
+        padding: 0 80px; /* instead of the 230px initially specified in the mockup */
     }
 
     main {
@@ -747,7 +744,8 @@ footer ul li {
 
     /* center align figcaption titles on medium devices */
     .activities .card figcaption {
-        height: 50px;
+        height: 70px;
+        padding: 0 19px;
     }
 
     /* footer on medium devices */
@@ -773,6 +771,7 @@ footer ul li {
         flex-direction: column;
         align-items: center;
     }
+
     nav {
         padding: 0;
         width: 100%;
@@ -854,22 +853,20 @@ footer ul li {
 
     /*=== accommodation and trending on small devices ===*/
 
-    /* Trending section above Accommodation section on mobile  */
     .accommodation-and-trending {
         /* layout */
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* trending section above Accommodation section on mobile  */
         /* dimensions and spacing */
         gap: 15px;
     }
 
-    /* Remove sections border-radius on mobile */
     .accommodation-and-trending section {
         /* layout */
         display: flex;
         /* dimensions and spacing */
         gap: 15px;
         /* borders and background */
-        border-radius: 0;
+        border-radius: 0; /* remove sections border-radius on mobile */
     }
 
     /* White background on mobile*/
@@ -877,7 +874,7 @@ footer ul li {
         background-color: #FFFFFF;
     }
 
-    /* Reduce padding and gap on mobile */
+    /* Reduce padding on mobile */
     .accommodation {
         padding: 20px;
     }
@@ -925,16 +922,12 @@ footer ul li {
         gap: 15px;
     }
 
-    .activities .card {
+    .activities a {
         width: 100%;
     }
 
     .activities .card img{
         height: 141px;
-    }
-
-    .activities .card figcaption {
-        height: auto;
     }
 
     /*!* footer on mobile *!*/
