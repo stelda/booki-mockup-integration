@@ -664,10 +664,6 @@ footer ul li {
 
 /*!* ---- Large Devices (more than 1900px) ---- *!*/
 @media (min-width: 1900px) {
-    .main-container {
-        padding: 0 80px; /* instead of the 230px initially specified in the mockup */
-    }
-
     main {
         padding: 0 50px;
         gap: 35px;
