@@ -352,11 +352,11 @@ nav li a:hover {
 
 #search-text {
     display:inline;
- }
+}
 
- #search-icon {
+#search-icon {
     display:none;
- }
+}
 
  /*
     4.3 Filter-bar
@@ -540,7 +540,6 @@ nav li a:hover {
     flex-direction: column;
     /* dimensions and spacing */
     gap: 30px;
-
 }
 
 .trending-cards .card {
@@ -549,7 +548,6 @@ nav li a:hover {
     align-items: stretch;
     /* dimensions and spacing */
     padding: 5px;
-
 }
 
 .trending-cards img {
@@ -644,7 +642,6 @@ nav li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    align-self: stretch;
     /* dimensions and spacing */
     padding: 20px 19px;;
 }
@@ -696,12 +693,12 @@ footer ul li {
 
 /*!* ---- Medium Devices (less/equal than 1024px) ---- *!*/
 @media (max-width: 1024px) {
-    /* header on medium devices */
+    /*=== header on medium devices ===*/
     nav {
         padding: 0 50px;
     }
 
-    /* info-group on medium devices */
+    /*=== info-group on medium devices ===*/
     .filter-bar {
         flex-direction: column;
         justify-content: center;
@@ -719,7 +716,7 @@ footer ul li {
         font-weight: 700;
     }
 
-    /* accommodation and trending on medium devices */
+    /*=== accommodation and trending on medium devices ===*/
     .accommodation-and-trending {
         flex-direction: column;
         gap: 50px;
@@ -753,7 +750,7 @@ footer ul li {
         font-size: 13px; /* 13px = 0.8125em */
     }
 
-    /* activities on medium devices */
+    /*=== activities on medium devices ===*/
     .activities .card img{
         height: 200px;
     }
@@ -764,7 +761,7 @@ footer ul li {
         padding: 0 19px;
     }
 
-    /* footer on medium devices */
+    /*=== footer on medium devices ===*/
     footer {
         gap: 30px;
     }
@@ -776,12 +773,12 @@ footer ul li {
 
 /*!* ---- Small Devices (less/equal than 768px) ---- *!*/
 @media (max-width: 768px) {
-    /* global settings on small devices *!*/
+    /*=== global settings on small devices ===*/
     main {
         padding: 0;
     }
 
-    /* header on small devices */
+    /*=== header on small devices ===*/
     header {
         display: flex;
         flex-direction: column;
@@ -831,7 +828,7 @@ footer ul li {
         border-bottom: 2px solid var(--blue);
     }
 
-    /* info-group on small devices */
+    /*=== info-group on small devices ===*/
     .info-group {
         padding: 0 20px;
     }
@@ -875,10 +872,9 @@ footer ul li {
     }
 
     /*=== accommodation and trending on small devices ===*/
-
     .accommodation-and-trending {
-        /* layout */
-        flex-direction: column-reverse; /* trending section above Accommodation section on mobile  */
+        /* layout : trending section above Accommodation section on mobile */
+        flex-direction: column-reverse;
         /* dimensions and spacing */
         gap: 15px;
     }
@@ -888,8 +884,8 @@ footer ul li {
         display: flex;
         /* dimensions and spacing */
         gap: 15px;
-        /* borders and background */
-        border-radius: 0; /* remove sections border-radius on mobile */
+        /* borders and background : remove sections border-radius on mobile*/
+        border-radius: 0;
     }
 
     /* White background on mobile*/
@@ -897,20 +893,20 @@ footer ul li {
         background-color: #FFFFFF;
     }
 
-    /* Reduce padding on mobile */
     .accommodation {
+        /* dimensions and spacing : reduce padding on mobile */
         padding: 20px;
     }
 
-    /* Reduce gap and columns to 1 on mobile */
     .accommodation-grid {
+        /* layout : reduce columns to 1 on mobile */
         grid-template-columns: repeat(1, 1fr);
+        /* dimensions and spacing : reduce gap */
         grid-gap: 15px;
     }
 
-    /* Modify section layout in column on mobile */
     .trending {
-        /* layout */
+        /* layout in column on mobile*/
         display: flex;
         flex-direction: column;
         align-self: stretch;
@@ -919,9 +915,8 @@ footer ul li {
         gap: 15px;
     }
 
-    /* Card layout in column on mobile  */
     .trending-cards {
-        /* layout */
+        /* layout in column on mobile */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -929,12 +924,12 @@ footer ul li {
         gap: 15px;
     }
 
-    /* Card layout across the entire available width on mobile */
     .trending-cards .card {
+        /* dimensions and spacing : card layout across the entire available width on mobile */
         width: 100%;
     }
 
-    /* activities */
+    /*=== activities on small devices ===*/
     .activities-cards {
         /* layout */
         display: flex;
@@ -949,11 +944,16 @@ footer ul li {
         width: 100%;
     }
 
-    .activities .card img{
+    .activities .card figcaption {
+        height: auto;
+        padding: 20px 19px;
+    }
+
+    .activities .card img {
         height: 141px;
     }
 
-    /*!* footer on mobile *!*/
+    /*=== footer on small devices ===*/
     footer {
         /* layout */
         flex-direction: column;
@@ -963,6 +963,7 @@ footer ul li {
     }
 
     footer div {
+        /* dimensions and spacing */
         width: 100%;
         padding: 0;
     }
