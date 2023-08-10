@@ -816,6 +816,10 @@ footer ul li {
         padding: 0 20px;
     }
 
+    .headline h1 {
+        padding-right: 10px;
+    }
+
     .search-bar form {
         gap: 10px;
     }
