@@ -959,7 +959,7 @@ footer ul li {
         flex-direction: column;
         /* dimensions and spacing */
         padding: 30px;
-        gap: 50px
+        gap: 50px;
     }
 
     footer div {
